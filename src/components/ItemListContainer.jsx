@@ -2,8 +2,9 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/esm/Container';
+import ItemCount from './ItemCount';
 
-const ItemListContainer = ({titulo}) => {
+const ItemListContainer = ({titulo, stock}) => {
     return(
         <Card className='m-1' style={{ width: '25rem' }}>
         {/* <Card.Img variant="top" src=""/> */}
@@ -13,6 +14,7 @@ const ItemListContainer = ({titulo}) => {
                 <p className='m-0'>Artista</p>
                 <p className='m-0'>Año</p>
             </Card.Text>
+            <ItemCount stock = {stock} initial= '1' />
             <Container className='d-flex justify-content-center'>
                 <Button className='d-inline-flex m-1' variant="secondary">+ Info</Button>
                 <Button className='d-inline-flex m-1' variant="primary">Agregar al Carrito</Button>
