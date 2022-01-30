@@ -19,9 +19,9 @@ const ItemCount = ({stock, initial}) => {
 
     return (
         <Container className='d-flex justify-content-center align-items-center'>
-            <Button className='m-1' onClick= { remove } >-</Button>
+            <Button className='m-1' onClick= {remove} >-</Button>
             <p className='m-1'>{count}</p>            
-            <Button className='m-1' onClick= { add } >+</Button>
+            <Button className='m-1' onClick= {add} >+</Button>
         </Container>      
     )
 };

@@ -1,9 +1,15 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import {Container, Button} from 'react-bootstrap';
-import ItemCount from './ItemCount';
+import {useNavigate} from 'react-router-dom';
 
-const Product = ({title, img, precio, año, description, stock}) => {
+const Product = ({id, title, img, precio, description}) => {
+    const navigate = useNavigate();
+
+    const goToProduct = () => {
+        navigate(`/product/${id}`)
+    }
+
     return(
         <Card className='m-3' style={{ width: '15rem' }}>        
         <Card.Img className='img-fluid' variant="top"  src={img}/>
@@ -12,9 +18,8 @@ const Product = ({title, img, precio, año, description, stock}) => {
             <Card.Text>                
                 <p className='m-0'>${precio}</p>
             </Card.Text>
-            {/* <ItemCount stock = {stock} initial= {1} /> */}
             <Container className='d-flex justify-content-center'>
-                <a href={description}><Button className='d-inline-flex m-1' variant="secondary">+Info</Button></a>
+                <Button onClick={ () => goToProduct()} className='d-inline-flex m-1' variant='secondary'>+Info</Button>
                 <Button className='d-inline-flex m-1' variant="primary">Comprar</Button>
             </Container>       
         </Card.Body>
