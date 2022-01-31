@@ -1,4 +1,5 @@
 body {
+  background-color: aliceblue;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,51 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.alToque{
+  color: aliceblue;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.navSticky {
+  position: sticky !important;
+  top: 0px !important;
+  z-index: 999; }
+
+.navBar{
+  background-color: #004369 !important;  
+}
+
+.ddB{
+  background-color: aliceblue;
+}
+
+.borderW{
+  box-shadow: none !important;
+  border: 1px solid aliceblue;
+}
+
+.borderW:hover{
+  border: 1px solid aliceblue;
+}
+
+.ddLinks{
+  color: #002940;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.navBarLinks {
+  color: aliceblue !important;  
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
 }

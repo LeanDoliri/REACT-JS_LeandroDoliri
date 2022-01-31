@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Container } from "react-bootstrap";
 import { useOutletContext, useParams } from "react-router-dom";
 import { getProductDescription, getProductDetail } from "../services/Products";
 import ItemDetail from "./ItemDetail"
@@ -22,14 +21,14 @@ const ItemDetailContainer = () =>{
                     setProduct(item);
                     setTimeout(() => {
                         setLoading(false)
-                    }, 2000)
+                    }, 500)
                 }
             });
         return () => mounted = false;
     }, [id]);
 
     return(
-        <div>
+        <div>            
             {product ? <ItemDetail product={product} /> : null }
         </div>
     )
