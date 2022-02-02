@@ -8,6 +8,14 @@ import { Link } from 'react-router-dom';
 import { Button, Col, Dropdown, Form, FormControl} from 'react-bootstrap';
 
 const NavbarAT = () => {
+    
+    const onSerchChange = (event) =>{        
+        let query = event.target.value; 
+        if (query.lenght > 6){
+            
+        }
+    }
+
     return (
         <div className='App navSticky'>
             <Container fluid>          
@@ -32,6 +40,7 @@ const NavbarAT = () => {
                                     placeholder="Buscar"
                                     className="me-2 borderW"
                                     aria-label="Search"
+                                    onChange={onSerchChange}
                                     />
                                     <Button className='navBarLinks navBar borderW'>Buscar</Button>
                                 </Form>

@@ -11,16 +11,16 @@ const Product = ({id, title, img, precio, description}) => {
     }
 
     return(
-        <Card className='m-3' style={{ width: '15rem' }}>        
+        <Card className='m-3' style={{ width: '18rem' }}>        
         <Card.Img className='img-fluid' variant="top"  src={img}/>
         <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>                
                 <p className='m-0'>${precio}</p>
             </Card.Text>
-            <Container className='d-flex justify-content-center'>
-                <Button onClick={ () => goToProduct()} className='d-inline-flex m-1' variant='secondary'>+Info</Button>
-                <Button className='d-inline-flex m-1' variant="primary">Comprar</Button>
+            <Container fluid className='d-flex justify-content-center p-0'>
+                <Button onClick={ () => goToProduct()} className='btnAT m-0'>Ver detalle del Producto</Button>
+                {/* <Button className='d-inline-flex m-1 btnAT' variant="primary">Comprar</Button> */}
             </Container>       
         </Card.Body>
         </Card>

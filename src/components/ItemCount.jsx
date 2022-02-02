@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
-const ItemCount = ({stock, initial}) => {
-    const [count, setCount] = useState (initial);
+const ItemCount = ({itemQty, stock, setItemQty}) => {    
 
     const add = () => {
-        if (count < stock){
-            setCount(count + 1);
+        if (itemQty < stock){
+            setItemQty(itemQty + 1);
         }
     };
 
     const remove = () => {
-        if (count > 1){
-            setCount(count - 1);
+        if (itemQty > 1){
+            setItemQty(itemQty - 1);
         }
     };
 
     return (
-        <Container className='d-flex justify-content-center align-items-center'>
-            <Button className='m-1' onClick= {remove} >-</Button>
-            <p className='m-1'>{count}</p>            
-            <Button className='m-1' onClick= {add} >+</Button>
+        <Container className='d-flex justify-content-center align-items-center p-0 mt-0 mb-2'>
+            <Button className='btnAT ms-5 me-2' onClick= {remove} >-</Button>
+            <p className='itemDetailP m-3 d-flex justify-content-center align-items-center'>{itemQty}</p>            
+            <Button className='btnAT ms-2 me-5' onClick= {add} >+</Button>
         </Container>      
     )
 };

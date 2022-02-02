@@ -37,13 +37,9 @@ a {
   background-color: aliceblue;
 }
 
-.borderW{
+.borderW, .borderW:hover, .borderW:focus {
   box-shadow: none !important;
-  border: 1px solid aliceblue;
-}
-
-.borderW:hover{
-  border: 1px solid aliceblue;
+  border: 1px solid aliceblue !important;
 }
 
 .ddLinks{
@@ -58,4 +54,39 @@ a {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
+}
+
+.itemDetailTitle{
+  color: #002940;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  border-bottom: 1px solid #002940;
+}
+
+.itemDetailP{
+  text-align: center;
+  color: #002940;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;  
+}
+
+.btnAT, .btnAT:hover, .btnAT:focus {
+  background-color: #004369;
+  color: aliceblue !important;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  width: 100%;
+  box-shadow: none !important;
+  border-color: #004369;
+}
+
+.itemDetailDescription{
+  text-align: left;
+  color: #002940;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;  
 }
