@@ -7,7 +7,6 @@ const ItemDetail = ({product}) => {
     const [itemQty, setItemQty] = useState(1);
     const [compra, setCompra] = useState([]);
     const navigate = useNavigate();
-
     
     const solicitarCompra = new Promise ((resolve) =>{
         setTimeout(() =>{
