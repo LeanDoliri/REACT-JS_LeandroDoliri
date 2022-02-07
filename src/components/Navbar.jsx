@@ -9,12 +9,11 @@ import { Button, Col, Dropdown, Form, FormControl} from 'react-bootstrap';
 
 const NavbarAT = () => {
     
-    const onSerchChange = (event) =>{        
-        let query = event.target.value; 
-        if (query.lenght > 6){
-            
-        }
-    }
+    // const onSerchChange = (event) =>{        
+    //     let query = event.target.value; 
+    //     if (query.lenght > 6){
+    //     }
+    // }
 
     return (
         <div className='App navSticky'>
@@ -40,7 +39,7 @@ const NavbarAT = () => {
                                     placeholder="Buscar"
                                     className="me-2 borderW"
                                     aria-label="Search"
-                                    onChange={onSerchChange}
+                                    // onChange={onSerchChange}
                                     />
                                     <Button className='navBarLinks navBar borderW'>Buscar</Button>
                                 </Form>
@@ -61,7 +60,7 @@ const NavbarAT = () => {
                                         </Dropdown.Menu>
                                     </Dropdown>
 
-                                    <CarWidget/>
+                                    <CarWidget />
                                 </div>
                             </Nav>
                         </Col>
