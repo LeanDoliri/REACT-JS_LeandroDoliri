@@ -56,6 +56,23 @@ a {
   font-size: 1.2rem;
 }
 
+.itemTitle{
+  color: #002940;
+  text-align: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #002940;
+}
+
+.itemPrice{
+  color: #002940;
+  text-align: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
 .itemDetailTitle{
   color: #002940;
   font-family: 'Josefin Sans', sans-serif;

@@ -16,6 +16,7 @@ const Home = () => {
           setProducts(items.results);
         }
       });
+      setLoading(false);
       return () => mounted = false;
     }, 500);
     },[])    

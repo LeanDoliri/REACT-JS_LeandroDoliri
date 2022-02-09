@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { useOutletContext } from 'react-router-dom';
 // import { Link, useNavigate } from 'react-router-dom';
 import { CartContext, CartProvider } from '../contexts/CartContext';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({product}) => { 
     const [itemQty, setItemQty] = useState(1);
+    const [loading, setLoading] = useOutletContext();
     // const [compra, setCompra] = useState([]);
     // const navigate = useNavigate();
 
     const {addCartItem} = useContext (CartContext);
+
+    useEffect(() => {
+        setLoading(false)
+    })
     
     // const solicitarCompra = new Promise ((resolve) =>{
     //     setTimeout(() =>{
