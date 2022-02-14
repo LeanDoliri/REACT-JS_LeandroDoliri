@@ -64,7 +64,10 @@ const NavbarAT = () => {
                                 </div>
                             </Nav>
                         </Col>
-                        <Col>
+                        <Col className='d-inline-flex justify-content-end'>
+                            <Nav className='d-flex justify-content-end'>
+                                <Nav.Link as={Link} to='/addProduct' className='navBarLinks'>Add Product</Nav.Link>
+                            </Nav>
                             <Nav className='d-flex justify-content-end'>
                                 <Nav.Link className='navBarLinks'>Login</Nav.Link>
                             </Nav>

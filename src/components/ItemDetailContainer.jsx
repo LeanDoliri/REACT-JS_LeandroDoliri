@@ -1,36 +1,27 @@
 import React from "react";
 import { useState } from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
-import { getProductDescription, getProductDetail } from "../services/Products";
+import { ProductContext, ProductProvider } from "../contexts/ProductContext";
 import ItemDetail from "./ItemDetail"
 
-const ItemDetailContainer = () =>{
+const ItemDetailContainer = () => {
     const {id} = useParams();
     const [loading, setLoading] = useOutletContext ();
     const [product, setProduct] = useState(null);
+    const {productsDetails} = useContext(ProductContext);
 
-    useEffect(() => {
-        let mounted = true;
-        setLoading(true);
-        Promise.all([getProductDetail(id), getProductDescription(id)])
-            .then(results => {
-                let item = results[0];
-                item.description = results[1].plain_text
-                if (mounted) {
-                    setProduct(item);
-                    setTimeout(() => {
-                        setLoading(false)
-                    }, 500)
-                }
-            });
-        return () => mounted = false;
-    }, [id]);
+    useEffect(() =>{        
+        setProduct(productsDetails.find(item => item.id == id));    
+    });
 
     return(
-        <div>            
-            {product ? <ItemDetail product={product} /> : null }
-        </div>
+        <ProductProvider>
+            <div>                       
+                {product ? <ItemDetail product={product} /> : null}
+            </div>
+        </ProductProvider>
     )
 }
 

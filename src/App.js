@@ -6,6 +6,9 @@ import NoPage from './components/NoPage';
 import Category from './components/Category';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
+import AddProduct from './components/AddProduct';
+import { ProductProvider } from './contexts/ProductContext';
+
 
 const App = () => {
  
@@ -13,10 +16,11 @@ const App = () => {
     <BrowserRouter>
         <Routes >
             <Route path='/' element= {<Layout />}>
-              <Route index element= {<Home />} />
+              <Route index element= {<ProductProvider><Home /></ProductProvider>} />
               <Route path="/category/:id" element={<Category/>} />
-              <Route path='/product/:id' element={<ItemDetailContainer/>} />
+              <Route path='/product/:id' element={<ProductProvider><ItemDetailContainer/></ProductProvider>} />
               <Route path='/cart' element={<Cart />} />
+              <Route path='/addProduct' element={<AddProduct />} />
               <Route path='*' element={<NoPage/>} />
             </Route>            
         </Routes>

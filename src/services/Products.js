@@ -1,6 +1,6 @@
 export const getProductFromCategory = (MLA, category) => {
     return fetch(`https://api.mercadolibre.com/sites/${MLA}/search?category=${category}`)
-        .then(response => response.json())      
+        .then(response => response.json())  
 }
 
 export const getProductDetail = (id) => {
