@@ -22,7 +22,7 @@ const Home = () => {
         snapshot.forEach((document)=> {
           const album = document.data();
           album['id']=document.id;
-          albumsList.push(album);
+          albumsList.push(album); 
         });
 
         setProducts(albumsList);

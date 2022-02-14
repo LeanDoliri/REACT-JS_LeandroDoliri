@@ -45,7 +45,7 @@ const NavbarAT = () => {
                                 </Form>
 
                                 <div className='d-flex align-items-center'>                                
-                                    <Dropdown>
+                                    {/* <Dropdown>
                                         <Dropdown.Toggle className='navBar navBarLinks borderW' id="dropdown-basic">
                                         Categorias
                                         </Dropdown.Toggle>
@@ -58,16 +58,15 @@ const NavbarAT = () => {
                                                 Libros, Revistas y Comics
                                             </Dropdown.Item>                                           
                                         </Dropdown.Menu>
-                                    </Dropdown>
-
-                                    <CarWidget />
+                                    </Dropdown> */}
+                                    <Nav className='d-flex justify-content-end'>
+                                        <Nav.Link as={Link} to='/addProduct' className='navBarLinks'>Add Product</Nav.Link>
+                                    </Nav>                                    
                                 </div>
                             </Nav>
                         </Col>
                         <Col className='d-inline-flex justify-content-end'>
-                            <Nav className='d-flex justify-content-end'>
-                                <Nav.Link as={Link} to='/addProduct' className='navBarLinks'>Add Product</Nav.Link>
-                            </Nav>
+                            <CarWidget />
                             <Nav className='d-flex justify-content-end'>
                                 <Nav.Link className='navBarLinks'>Login</Nav.Link>
                             </Nav>
