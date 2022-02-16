@@ -22,7 +22,7 @@ const NavbarAT = () => {
                     <Navbar className='d-flex flex-row justify-content-between align-items-between navBar'>                
                         <Col>
                             <Link to={'/'}>
-                            <div className='alToque d-inline-flex justify-content-center align-items-center pt-2'>
+                            <div className='alToque d-inline-flex justify-content-center align-items-center pt-2 hover'>
                                 <h1 className='m-0'>AL TOQUE</h1>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-speaker pb-2 m-2" viewBox="0 0 16 16">
                                     <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
@@ -59,16 +59,16 @@ const NavbarAT = () => {
                                             </Dropdown.Item>                                           
                                         </Dropdown.Menu>
                                     </Dropdown> */}
-                                    <Nav className='d-flex justify-content-end'>
+                                    <Nav className='hover d-flex justify-content-end'>
                                         <Nav.Link as={Link} to='/addProduct' className='navBarLinks'>Add Product</Nav.Link>
                                     </Nav>                                    
                                 </div>
                             </Nav>
                         </Col>
-                        <Col className='d-inline-flex justify-content-end'>
+                        <Col className='d-inline-flex justify-content-end align-items-center'>
                             <CarWidget />
                             <Nav className='d-flex justify-content-end'>
-                                <Nav.Link className='navBarLinks'>Login</Nav.Link>
+                                <Nav.Link className='navBarLinks hover'>Login</Nav.Link>
                             </Nav>
                         </Col>
                     </Navbar>

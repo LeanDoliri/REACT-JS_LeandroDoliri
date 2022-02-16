@@ -14,7 +14,7 @@ const Product = ({product}) => {
     };
 
     return(
-        <Card className='m-3 p-0' style={{ width: '18rem' }}>        
+        <Card className='m-3 p-0 hover' style={{ width: '18rem' }}>        
             <Card.Img className='img-fluid' src={img}/>
             <Card.Body className='d-flex flex-column justify-content-end pt-3 pb-0 ps-0 pe-0'>
                 <Card.Title className='itemTitle ms-2 me-2'>{title} - {artist}</Card.Title>

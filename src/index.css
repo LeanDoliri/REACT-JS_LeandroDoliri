@@ -115,3 +115,14 @@ a {
   box-shadow: none !important;
   border-color: #004369 !important;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  .hover{
+    transition: 250ms;
+  }
+
+  .hover:hover {
+    transform: scale(1.02, 1.02);
+  }
+}

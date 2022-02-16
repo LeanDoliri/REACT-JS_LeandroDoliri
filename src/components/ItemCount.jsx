@@ -18,9 +18,9 @@ const ItemCount = ({itemQty, stock, setItemQty}) => {
 
     return (
         <Container className='d-flex justify-content-center align-items-center p-0 mt-0 mb-2'>
-            <Button className='btnAT ms-5 me-2' onClick= {remove} >-</Button>
+            <Button className='btnAT ms-5 me-2 hover' onClick= {remove} >-</Button>
             <p className='itemDetailP m-3 d-flex justify-content-center align-items-center'>{itemQty}</p>            
-            <Button className='btnAT ms-2 me-5' onClick= {add} >+</Button>
+            <Button className='btnAT ms-2 me-5 hover' onClick= {add} >+</Button>
         </Container>      
     )
 };

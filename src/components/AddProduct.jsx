@@ -4,7 +4,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 
 const AddProduct = () => {
-    const onSubmit = (e) =>{
+    const onSubmit = (e) => {
         e.preventDefault();
         const title = e.target.elements.title.value;
         const artist = e.target.elements.artist.value;
@@ -35,7 +35,7 @@ const AddProduct = () => {
 
     return (
         <Container>
-            <h1>add product</h1>
+            <h1>Agregar Producto</h1>
             <Form onSubmit={onSubmit}>
                 <Form.Group className='' controlId='title'>
                     <Form.Control className='imputForm mt-2 me-2 mb-2' type="text" placeholder="Titulo"/>
@@ -59,7 +59,7 @@ const AddProduct = () => {
                     <Form.Control as='textarea' className='imputForm mt-2 mb-2' rows={3} type="text" placeholder="Descripción" />
                 </Form.Group>        
                 
-                <Button className='btnAT' type='submit'>
+                <Button className='btnAT hover' type='submit'>
                     Enviar
                 </Button>
             </Form>

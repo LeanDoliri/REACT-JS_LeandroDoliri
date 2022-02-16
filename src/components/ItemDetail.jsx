@@ -28,7 +28,7 @@ const ItemDetail = ({product}) => {
                             <p className='itemDetailP mb-0'>Cantidad</p>
                             <ItemCount itemQty={itemQty} id={product.id} stock={product.stock} setItemQty={setItemQty}/>
                             <p className='itemDetailP'>(Disponibles: {product.stock})</p>
-                            <Button onClick = {() => addCartItem(product, itemQty)} className='btnAT mt-3 mb-0 ms-0 me-0'>Comprar</Button>                  
+                            <Button onClick = {() => addCartItem(product, itemQty)} className='btnAT mt-3 mb-0 ms-0 me-0 hover'>Comprar</Button>                  
                         </Container>                    
                     </Col>
                 </Row>
