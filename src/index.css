@@ -65,6 +65,14 @@ a {
   border-bottom: 1px solid #002940;
 }
 
+.itemSubTitle{
+  color: #002940;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  border-bottom: 1px solid #002940;
+}
+
 .itemPrice{
   color: #002940;
   text-align: left;
@@ -76,8 +84,16 @@ a {
 .itemDetailTitle{
   color: #002940;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 2.3rem;
+  border-bottom: 1px solid #002940;
+}
+
+.itemDetailSubTitle{
+  color: #002940;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   border-bottom: 1px solid #002940;
 }
 
@@ -101,6 +117,7 @@ a {
 }
 
 .itemDetailDescription{
+  border-top: 1px solid #002940;
   text-align: left;
   color: #002940;
   font-family: 'Josefin Sans', sans-serif;
@@ -114,6 +131,16 @@ a {
   font-size: 1.1rem;
   box-shadow: none !important;
   border-color: #004369 !important;
+}
+
+.ATtoast{
+  background-color: #004369 !important;
+  color: aliceblue !important;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  border: #004369;
+  box-shadow: 1px 1px 5px #002940 !important;
 }
 
 @media only screen and (min-width: 1024px) {

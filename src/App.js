@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Layout from './components/Layout';
-import NoPage from './components/NoPage';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import Cart from './components/Cart';
-import AddProduct from './components/AddProduct';
+import Home from './pages/Home';
+import Layout from './components/layouts/Layout';
+import NoPage from './pages/NoPage';
+import ItemDetailContainer from './pages/ItemDetailContainer';
+import Cart from './pages/Cart';
+import AddProduct from './pages/AddProduct';
 import { ProductProvider } from './contexts/ProductContext';
 
 
