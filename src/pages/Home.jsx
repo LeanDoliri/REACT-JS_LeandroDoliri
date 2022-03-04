@@ -10,12 +10,16 @@ const Home = () => {
   const { getFromFirebase } = useContext(ProductContext);
 
   useEffect(() => {
+    let mounted = true;
     setLoading(true);
-
-    getFromFirebase()
-      .then((products) => setProducts(products))
-      .then(() => setLoading(false));
-  });
+    getFromFirebase().then((products) => {
+      if (mounted) {
+        setProducts(products);
+        setLoading(false);
+      }
+    });
+    return () => (mounted = false);
+  }, [getFromFirebase, setLoading]);
 
   return (
     <div>
