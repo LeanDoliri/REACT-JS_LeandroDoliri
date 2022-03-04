@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
     getFromFirebase()
       .then((products) => setProduct(products.find((item) => item.id === id)))
       .then(() => setLoading(false));
-  }, [loading, getFromFirebase, id, setLoading]);
+  }, []);
 
   return (
     <ProductProvider>
