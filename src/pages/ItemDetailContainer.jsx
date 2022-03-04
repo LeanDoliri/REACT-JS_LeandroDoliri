@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
     getFromFirebase()
-      .then((products) => setProduct(products.find((item) => item.id == id)))
+      .then((products) => setProduct(products.find((item) => item.id === id)))
       .then(() => setLoading(false));
   }, []);
 

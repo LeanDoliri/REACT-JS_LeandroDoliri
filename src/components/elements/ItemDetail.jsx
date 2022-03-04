@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { useOutletContext } from "react-router-dom";
 import { CartContext, CartProvider } from "../../contexts/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ product }) => {
   const [itemQty, setItemQty] = useState(1);
-  const [loading, setLoading] = useOutletContext();
   const { addCartItem } = useContext(CartContext);
-
-  useEffect(() => {
-    setLoading(false);
-  });
 
   return (
     <CartProvider>
@@ -22,7 +16,7 @@ const ItemDetail = ({ product }) => {
             xs={5}
             className="d-flex justify-content-center align-itmes-center"
           >
-            <img className="img-fluid rounded" src={product.img} />
+            <img className="img-fluid rounded" alt={product.title} src={product.img} />
           </Col>
           <Col xs={5}>
             <h1 className="itemDetailTitle">

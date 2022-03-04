@@ -13,9 +13,9 @@ export const CartProvider = ({children}) => {
     }
 
     const addCartItem = (product, itemQty) => {       
-        const newCartItem = cartItems.find(item => item.id == product.id);
+        const newCartItem = cartItems.find(item => item.id === product.id);
         
-            if (newCartItem == undefined){
+            if (newCartItem === undefined){
                 product.qty = itemQty;
                 setCartItems([...cartItems, product]); 
             }else{

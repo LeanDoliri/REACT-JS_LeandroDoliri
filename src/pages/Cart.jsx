@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Slide, toast } from "react-toastify";
 import { CartContext, CartProvider } from "../contexts/CartContext";
 import { addDoc, collection } from "firebase/firestore";
@@ -13,14 +13,12 @@ const Cart = () => {
     useContext(CartContext);
   const [cartTotal, setCartTotal] = useState();
   const navigate = useNavigate();
-  const [loading, setLoading] = useOutletContext();
 
   useEffect(() => {
     setCartTotal(
       cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
     );
-    setLoading(false);
-  });
+  },[cartItems]);
 
   const goToHome = () => {
     navigate("/");
@@ -79,7 +77,7 @@ const Cart = () => {
       <Container>
         <h1 className="itemDetailTitle mt-3 p-2">CARRITO</h1>
         {(() => {
-          if (cartItems == "") {
+          if (cartItems == '') {
             return (
               <Container>
                 <Row className="d-flex">
