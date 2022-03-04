@@ -8,7 +8,7 @@ import ItemDetail from "../components/elements/ItemDetail";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const [loading, setLoading] = useOutletContext();
+  const [setLoading] = useOutletContext();
   const [product, setProduct] = useState(null);
   const { getFromFirebase } = useContext(ProductContext);
 

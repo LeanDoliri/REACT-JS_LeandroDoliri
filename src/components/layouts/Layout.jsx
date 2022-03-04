@@ -13,7 +13,7 @@ const Layout = () => {
       <ToastContainer />
       <div className="App">
         <NavbarAT />
-        <Outlet context={[loading, setLoading]} />
+        <Outlet context={[setLoading]} />
         {loading ? <Loading /> : null}
       </div>
     </CartProvider>

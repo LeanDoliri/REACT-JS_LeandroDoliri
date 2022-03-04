@@ -6,7 +6,7 @@ import { ProductContext } from "../contexts/ProductContext";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useOutletContext();
+  const [setLoading] = useOutletContext();
   const { getFromFirebase } = useContext(ProductContext);
 
   useEffect(() => {
