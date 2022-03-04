@@ -77,7 +77,7 @@ const Cart = () => {
       <Container>
         <h1 className="itemDetailTitle mt-3 p-2">CARRITO</h1>
         {(() => {
-          if (cartItems == '') {
+          if (cartItems.length === 0) {
             return (
               <Container>
                 <Row className="d-flex">
