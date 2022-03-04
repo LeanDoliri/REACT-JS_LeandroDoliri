@@ -15,7 +15,7 @@ const Home = () => {
     getFromFirebase()
       .then((products) => setProducts(products))
       .then(() => setLoading(false));
-  }, []);
+  });
 
   return (
     <div>
