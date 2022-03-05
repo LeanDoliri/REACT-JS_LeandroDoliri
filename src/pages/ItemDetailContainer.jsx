@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
       }
     });
     return () => (mounted = false);
-  }, []);
+  }, [id, getFromFirebase, setLoading]);
 
   return (
     <ProductProvider>
