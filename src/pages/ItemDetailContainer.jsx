@@ -13,15 +13,11 @@ const ItemDetailContainer = () => {
   const { getFromFirebase } = useContext(ProductContext);
 
   useEffect(() => {
-    let mounted = true;
     setLoading(true);
     getFromFirebase().then((products) => {
-      if (mounted) {
         setProduct(products.find((item) => item.id === id));
         setLoading(false);
-      }
     });
-    return () => (mounted = false);
   }, [id, getFromFirebase, setLoading]);
 
   return (
